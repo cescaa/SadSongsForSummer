@@ -1,0 +1,308 @@
+/*
+Note: Responsive design in progress. 
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+.redTxt {
+  color: #ff3f55;
+}
+
+body {
+  background-color: #c5e044; /*#cee044*/
+  color: #090044;
+  overflow-x: hidden;
+  padding-bottom: 4rem;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 8rem;
+  padding-top: 1.5rem;
+  height: 9rem;
+}
+
+ul.navbar li {
+  display: flex;
+  float: left;
+  width: 9rem;
+  margin-right: 3rem;
+}
+
+ul.navbar li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-family: "avory-i-latin", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: #ff3f55;
+  padding: 0.7rem;
+  transition-duration: 0.2s ease-in-out;
+}
+
+ul.navbar li a:hover {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+}
+
+#nav1 {
+  position: relative;
+  top: 0.75rem;
+  transform: rotate(20deg);
+}
+
+#nav2 {
+  transform: rotate(-9deg);
+}
+
+#nav3 {
+  position: relative;
+  top: 2.2rem;
+  transform: rotate(28deg);
+}
+
+h1 {
+  font-family: "linotype-didot", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 6.5rem;
+  letter-spacing: -6px;
+  line-height: 6rem;
+  text-align: left;
+  margin-bottom: 0rem;
+}
+
+h2 {
+  font-family: "avory-i-pe", sans-serif; /* Extra Light */
+  font-weight: 200;
+  font-style: normal;
+  color: #090044;
+  margin-bottom: 0.5rem;
+}
+
+p,
+.paraClass {
+  font-family: "avory-i-pe", sans-serif; /* Extra Light */
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  width: 36rem;
+}
+
+i {
+  font-family: "avory-i-latin", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.mainText a {
+  text-decoration: none;
+  font-family: "avory-i-latin", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #ff3f55;
+}
+
+#forTxt {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: -3px;
+  bottom: 1rem;
+}
+
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 1rem; /* change this to whatever height you want it */
+}
+/*
+header {
+    width: 200vw;
+    height: 5vh;
+    background-color: aqua;
+}
+*/
+
+#headerImg {
+  max-width: 100.5%;
+  min-width: 116rem;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  z-index: -1;
+}
+/*
+#cryOliviaCont {
+  right: 25rem;
+}
+*/
+
+#sunImg {
+  position: absolute;
+  left: 15rem;
+  top: 35rem;
+  height: 12rem;
+}
+#cryOliviaImg {
+  float: right;
+  height: 25rem;
+  shape-outside: url("img/cryingOlivia.png");
+  /*shape-image-threshold: 0.5; */
+}
+
+#puddleImg {
+  float: right;
+  height: 24rem;
+  margin-bottom: 1rem;
+  shape-outside: polygon(
+    0 39%,
+    36% 38%,
+    66% 2%,
+    100% 0,
+    100% 89%,
+    68% 95%,
+    56% 96%,
+    0 97%
+  );
+  /*shape-outside: polygon(93% 1%, 0 75%, 100% 100%);*/
+}
+
+#couchImg {
+  position: absolute;
+  height: 17rem;
+  right: 7rem;
+}
+
+/* AUDIO PLAYER */
+
+#audioContainer {
+  position: fixed;
+  bottom: 2rem;
+  left: 1.5rem;
+  font-family: "avory-i-pe", sans-serif; /* Extra Light */
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5rem;
+  z-index: 3;
+}
+
+#audioContainer br {
+  margin-top: 0.2rem; /* change this to whatever height you want it */
+}
+
+#audioPlayer {
+  background-color: #ff9854;
+  border: #090044 solid 1.5px;
+  width: 26rem;
+  padding-top: 0.25rem;
+  margin-top: 1rem;
+}
+
+audio::-webkit-media-controls-panel {
+  text-decoration: none;
+  background-color: #ff9854;
+}
+
+audio::-webkit-media-controls-timeline-container,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button {
+  text-decoration: none;
+  color: #090044;
+  opacity: 1;
+  font-family: "avory-i-pe", sans-serif; /* Extra Light */
+  font-size: 1.25rem;
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.vidContainer {
+  position: relative;
+  right: 15rem;
+  width: 70rem;
+  min-height: 30rem;
+  padding: 4rem 0;
+  padding-bottom: 28%;
+  background-color: inherit;
+  background-image: url(img/sparkles.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: 2rem 0.5rem;
+}
+
+.vidContainer2 {
+  position: relative;
+  width: 36rem;
+  padding-bottom: 56.25%;
+  margin-top: 4rem;
+}
+
+.vidContainer iframe,
+.vidContainer2 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.vidContainer iframe {
+  top: 28%;
+  left: 23%;
+  width: 35rem;
+  height: 15rem;
+}
+
+.mainTitle {
+  /*background-color: blanchedalmond;*/
+  margin: auto;
+  margin-top: 9rem;
+  margin-bottom: 1rem;
+  width: 40rem;
+}
+
+.mainText {
+  margin: auto;
+  width: 50rem;
+  margin-left: 33.5%;
+}
+
+#sourcesContainer {
+  margin-top: 2rem;
+}
+
+.mainText ol {
+  font-family: "avory-i-pe", sans-serif; /* Extra Light */
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #090044;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1501px) {
+  .vidContainer iframe {
+    top: 32%;
+    height: 14rem;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  html {
+    font-size: 12px;
+  }
+}
